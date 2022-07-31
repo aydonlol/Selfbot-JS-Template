@@ -1,0 +1,21 @@
+{
+  "name": "selfbot4minecraft",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^14.1.2",
+    "legend.js": "^11.9.0",
+    "minecraft-protocol": "^1.35.1",
+    "node-fetch": "^2.6.7"
+  },
+  "devDependencies": {
+    "eslint": "^8.20.0"
+  }
+}

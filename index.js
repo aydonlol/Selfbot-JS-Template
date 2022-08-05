@@ -15,11 +15,19 @@ fs.readdir("./data/commands/", (err, files) => {
     console.log("No commands found.");
     return;
   }
+  
   jsfile.forEach((f, i) => {
     let props = require(`./data/commands/${f}`);
+    const aliases = props.help.aliases;
+    if (aliases) {
+      aliases.forEach((alias) => {
+        client.commands.set(alias, props);
+      })
+    };
     console.log(`${f} loaded!`);
     client.commands.set(props.help.name, props);
   });
+
 });
 
 if (config.token === "") {
